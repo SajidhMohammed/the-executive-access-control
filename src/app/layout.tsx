@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Manrope, Geist } from 'next/font/google';
 import './globals.css';
 import { Navigation, MobileNavigation } from '@/components/Navigation';
+import { UserDropdown } from '@/components/auth/UserDropdown';
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -40,11 +41,7 @@ export default function RootLayout({
             </div>
             {/* Desktop Navigation */}
             <Navigation />
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/20 bg-surface-container-highest">
-                <img alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJbINwdDESmL_MUmXpbKCi57swvH-XtHQBu3N11MAdH8RnA4fvSMDndCGuKIbAg3zZePthjJdqMarp68Cjp2DobF0SD9G0jPOHgZ9-69J_tVOYtJf5eRzJCu7c0eYbreYPpmcwwhhCPGS9fbX6-quiTISmOsWzVG4xaNyu14HYSbV4ROzzwkQ91hJeqh82m_6WoRcyWMk_qXRy-nfB7L78ETXvyeiTpUSu69fAe5-e4DP-ZXtJ7L-2DAy2AdKQR3vZDJImmQLsrR4" className="w-full h-full object-cover" />
-              </div>
-            </div>
+            <UserDropdown />
           </div>
         </header>
 
